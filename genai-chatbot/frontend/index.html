@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🤖 GenAI Chatbot</h1>
+            <p>Powered by Artificial Intelligence</p>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chatWindow">
+            <div class="welcome-message">
+                <h2>Welcome! 👋</h2>
+                <p>Start chatting with our AI assistant</p>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <!-- Clear Button -->
+        <div class="footer">
+            <button onclick="clearChat()" class="clear-btn">Clear Chat</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

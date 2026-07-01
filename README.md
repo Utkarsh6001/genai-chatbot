@@ -1,23 +1,33 @@
 # 🤖 GenAI Chatbot
 
-A simple AI chatbot built using **Flask** for the backend and **HTML, CSS, and JavaScript** for the frontend. The project demonstrates how a frontend communicates with a Python backend through REST APIs and is designed to be easily extendable with AI models such as Hugging Face.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/Flask-Backend-black?style=for-the-badge&logo=flask">
+  <img src="https://img.shields.io/badge/HTML5-Frontend-orange?style=for-the-badge&logo=html5">
+  <img src="https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript">
+</p>
+
+<p align="center">
+A simple AI Chatbot built using <b>Flask</b> for the backend and <b>HTML, CSS & JavaScript</b> for the frontend. The chatbot demonstrates frontend-backend communication using REST APIs and is designed for AI integration using Hugging Face.
+</p>
 
 ---
 
-## 🚀 Features
+# 📌 Features
 
-- Clean and responsive chat interface
-- Flask REST API backend
-- Frontend and backend communication using Fetch API
-- CORS enabled for cross-origin requests
-- Environment variables managed using `.env`
-- Chat history support
-- Clear chat functionality
-- Health check API for backend status
+- 💬 Interactive Chat Interface
+- ⚡ Flask Backend API
+- 🔄 Frontend & Backend Communication
+- 🌐 CORS Enabled
+- 🔐 Environment Variables using `.env`
+- 🧹 Clear Chat API
+- ❤️ Health Check API
+- 🤖 Hugging Face API Integration
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Frontend
 - HTML5
@@ -30,112 +40,128 @@ A simple AI chatbot built using **Flask** for the backend and **HTML, CSS, and J
 - Flask-CORS
 - Python Dotenv
 
-### AI
-- Hugging Face API (Environment Variable Support)
+### AI Integration
+- Hugging Face API
 
 ---
 
-## 📁 Project Structure
+# 📂 Project Structure
 
-```
+```text
 genai-chatbot/
 │
 ├── frontend/
 │   ├── index.html
-│   ├── styles.css
+│   ├── style.css
 │   └── script.js
 │
 ├── backend/
 │   ├── app.py
-│   ├── .env
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .env
 │
 └── .gitignore
 ```
 
 ---
 
-## ⚙️ Installation
+# 🚀 Installation
 
-### 1. Clone the repository
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/genai-chatbot.git
+git clone https://github.com/Utkarsh6001/genai-chatbot.git
 ```
 
-### 2. Move into the project folder
+### 2️⃣ Navigate to Project Folder
 
 ```bash
 cd genai-chatbot
 ```
 
-### 3. Install dependencies
+### 3️⃣ Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 ```
 
-### 4. Create a `.env` file
+### 4️⃣ Create a `.env` File
 
 ```env
-HUGGINGFACE_API_KEY=your_api_key_here
+HF_API_KEY=your_huggingface_api_key
 ```
 
-### 5. Run the backend
+### 5️⃣ Start the Backend
 
 ```bash
-python app.py
+python backend/app.py
 ```
 
-### 6. Open the frontend
+### 6️⃣ Run the Frontend
 
-Simply open `index.html` in your browser.
+Open `frontend/index.html` in your browser.
 
 ---
 
-## 📌 API Endpoints
+# 📡 API Endpoints
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
 | POST | `/api/chat` | Send a message to the chatbot |
-| POST | `/api/clear` | Clear chat history |
+| POST | `/api/clear` | Clear chat |
 | GET | `/api/health` | Check backend status |
 
 ---
 
-## 🎯 Learning Objectives
+# 📸 Screenshots
 
-This project helped me understand:
+> Add your project screenshots here.
 
+### Home Page
+
+```
+assets/home.png
+```
+
+### Chat Interface
+
+```
+assets/chat.png
+```
+
+---
+
+# 📖 What I Learned
+
+- Building REST APIs using Flask
 - Frontend and Backend Integration
-- REST API Development using Flask
-- Handling JSON Requests and Responses
+- Fetch API
+- JSON Request & Response Handling
 - Environment Variables using Dotenv
-- Basic AI API Integration
-- Project Structure and Organization
+- AI API Integration
+- Project Organization
 
 ---
 
-## 🔒 Security
+# 🔒 Security
 
-Sensitive information such as API keys is stored using environment variables (`.env`) and is excluded from the repository through `.gitignore`.
+API keys are stored securely using `.env` files and are excluded from the repository using `.gitignore`.
 
 ---
 
-## 🚀 Future Improvements
+# 🚀 Future Improvements
 
-- Real AI-generated responses
-- User authentication
-- Database integration
-- Chat history storage
+- User Authentication
+- Database Integration
+- Persistent Chat History
+- Multiple AI Models
 - Better UI/UX
 - Dark Mode
-- Multiple AI model support
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Utkarsh Kaushal**
 
-If you found this project helpful, feel free to ⭐ the repository.
+⭐ If you like this project, consider giving it a Star on GitHub.

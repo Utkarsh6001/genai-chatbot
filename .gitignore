@@ -1,0 +1,14 @@
+# Ignore dependencies and local files
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment files
+.env
+.env.local
+
+# System files
+.DS_Store
+
+# Lock files (optional to ignore if you don't want them tracked at root)
+package-lock.json

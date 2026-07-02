@@ -11,10 +11,14 @@ CORS(app)
 
 chat_history = []
 
-# Initialize Hugging Face API (free option)
-try:
-    hf_api = InferenceApi(api_key=os.getenv('HUGGINGFACE_API_KEY', 'hf_default'))
-except:
+# Initialize Hugging Face InferenceClient if API key is provided
+hf_api_key = os.getenv('HF_API_KEY')
+if hf_api_key:
+    try:
+        hf_api = InferenceClient(api_key=hf_api_key)
+    except Exception:
+        hf_api = None
+else:
     hf_api = None
 
 @app.route('/api/chat', methods=['POST'])
@@ -52,4 +56,5 @@ def clear_chat():
     return jsonify({'status': 'Chat cleared'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    # For development only. Use a WSGI server in production.
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)), debug=False)

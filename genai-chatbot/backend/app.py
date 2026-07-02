@@ -4,7 +4,9 @@ from huggingface_hub import InferenceClient
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load .env located in the same folder as this file (works even if you run the app from repo root)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__)
 CORS(app)
@@ -24,7 +26,7 @@ else:
 @app.route('/api/chat', methods=['POST'])
 def chat():
     try:
-        data = request.json
+        data = request.json or {}
         user_message = data.get('message', '')
         
         if not user_message:

@@ -45,7 +45,7 @@ elif not hf_api_key:
 
 else:
     try:
-        hf_api = InferenceClient(api_key=hf_api_key)
+        hf_api = InferenceClient(token=hf_api_key)
         logger.info("Hugging Face InferenceClient initialized.")
     except Exception as e:
         hf_api = None

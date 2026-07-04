@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = 'https://genai-chatbot-1kng.onrender.com'
 
 async function sendMessage() {
     const userInput = document.getElementById('userInput');

@@ -106,13 +106,17 @@ def chat():
         logger.exception("Error in /api/chat: %s", e)
         return jsonify({"error": str(e)}), 500
 
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "GenAI Chatbot Backend is Running 🚀"
+    })
 
 @app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({
         "status": "Backend is running! ✅"
     })
-
 
 @app.route("/api/clear", methods=["POST"])
 def clear_chat():

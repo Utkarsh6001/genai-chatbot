@@ -1,89 +1,262 @@
-# GenAI Chatbot
+<div align="center">
 
-A simple full-stack chatbot with a Flask backend and vanilla HTML/CSS/JS frontend. Responses are generated via the [Hugging Face Inference API](https://huggingface.co/docs/huggingface_hub/guides/inference) using `InferenceClient`.
+# 🤖 GenAI Chatbot
 
-## Prerequisites
+### 🚀 AI-Powered Chatbot using Flask + Hugging Face + HTML/CSS/JavaScript
 
-- Python 3.10+
-- A [Hugging Face account](https://huggingface.co/) and API token
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&duration=3000&pause=1000&center=true&vCenter=true&width=700&lines=Welcome+to+GenAI+Chatbot!;Built+with+Flask+%2B+Hugging+Face+🤖;Responsive+Frontend+%26+REST+API;Deployed+on+Netlify+%26+Render+🚀" />
+</p>
 
-## Setup
+<p align="center">
 
-1. Clone or download this repository.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 
-2. Create a virtual environment and install dependencies:
+</p>
 
-   ```bash
-   cd backend
-   python -m venv venv
-   venv\Scripts\activate        # Windows
-   # source venv/bin/activate   # macOS/Linux
-   pip install -r requirements.txt
-   ```
+<p align="center">
 
-3. Copy the example environment file and add your API key:
+![GitHub stars](https://img.shields.io/github/stars/Utkarsh6001/genai-chatbot?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Utkarsh6001/genai-chatbot?style=social)
 
-   ```bash
-   copy .env.example .env       # Windows
-   # cp .env.example .env       # macOS/Linux
-   ```
+</p>
 
-   Edit `.env` and set `HUGGINGFACE_API_KEY` to your token from [Hugging Face settings](https://huggingface.co/settings/tokens).
+</div>
 
-## Run
+---
 
-1. Start the backend (from the `backend` directory):
+# 🌟 Live Demo
 
-   ```bash
-   python app.py
-   ```
+### 🌐 Frontend
 
-   The API runs at `http://localhost:5000` by default.
+👉 **https://utkarsh-genai-chatbot.netlify.app**
 
-2. Open the frontend:
+### ⚡ Backend API
 
-   - Open `frontend/index.html` in your browser, or
-   - Serve the folder with any static file server.
+👉 **https://genai-chatbot-1kng.onrender.com**
 
-3. Chat in the UI. The frontend calls `POST /api/chat` on the backend.
+---
 
-## API Endpoints
+# 📖 About
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/api/health` | Health check; includes `ai_enabled` and `model` |
-| `POST` | `/api/chat` | Send `{ "message": "..." }`, get AI response |
-| `POST` | `/api/clear` | Clear server-side chat history |
+GenAI Chatbot is a responsive AI-powered chatbot that interacts with users using the Hugging Face Inference API.
 
-## Configuration
+The frontend is built using **HTML, CSS, and JavaScript**, while the backend is powered by **Python Flask**.
 
-Environment variables (set in `backend/.env`):
+The application is deployed using **Netlify** (Frontend) and **Render** (Backend).
 
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `HUGGINGFACE_API_KEY` | Yes | — | Hugging Face API token |
-| `HF_MODEL` | No | `meta-llama/Meta-Llama-3-8B-Instruct` | Model ID for chat completion |
-| `HF_MAX_TOKENS` | No | `500` | Max tokens per response |
-| `FLASK_DEBUG` | No | `false` | Enable Flask debug mode |
-| `PORT` | No | `5000` | Backend port |
+---
 
-## Project Structure
+# ✨ Features
+
+✅ AI-powered conversations
+
+✅ Responsive UI
+
+✅ Flask REST API
+
+✅ Hugging Face Integration
+
+✅ Chat History
+
+✅ Clear Chat Option
+
+✅ Environment Variable Support
+
+✅ Fully Responsive Design
+
+✅ Easy Deployment
+
+---
+
+# 🛠 Tech Stack
+
+| Frontend | Backend | AI | Deployment |
+|----------|----------|----|------------|
+| HTML5 | Flask | Hugging Face API | Netlify |
+| CSS3 | Python | Qwen Model | Render |
+| JavaScript | REST API | Transformers | GitHub |
+
+---
+
+# 📂 Project Structure
 
 ```
-genai-chatbot/
-├── backend/
-│   ├── app.py              # Flask API server
-│   ├── requirements.txt    # Python dependencies
-│   └── .env.example        # Environment template
-├── frontend/
-│   ├── index.html          # Chat UI
-│   ├── script.js           # Frontend logic
-│   └── styles.css          # Styles
+genai-chatbot
+│
+├── backend
+│   ├── app.py
+│   ├── requirements.txt
+│   └── .env
+│
+├── frontend
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
+│
 └── README.md
 ```
 
-## Notes
+---
 
-- Chat history is stored in memory on the server and is lost when the backend restarts.
-- Some models may require a paid Hugging Face plan or specific model access. If a model fails, try another `HF_MODEL` value.
-- The frontend expects the backend at `http://localhost:5000` (see `frontend/script.js`).
+# ⚙ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Utkarsh6001/genai-chatbot.git
+```
+
+```
+cd genai-chatbot
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd backend
+```
+
+Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+Activate
+
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Install Packages
+
+```bash
+pip install -r requirements.txt
+```
+
+Create `.env`
+
+```env
+HF_API_KEY=YOUR_HUGGING_FACE_TOKEN
+```
+
+Run
+
+```bash
+python app.py
+```
+
+---
+
+## Frontend
+
+```bash
+cd frontend
+```
+
+Simply open
+
+```
+index.html
+```
+
+or
+
+Use Live Server Extension.
+
+---
+
+# 🚀 Deployment
+
+### Frontend
+
+Netlify
+
+### Backend
+
+Render
+
+---
+
+# 📸 Screenshots
+
+> Add your screenshots here
+
+```
+images/home.png
+```
+
+```
+images/chat.png
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Authentication
+- User Login
+- Dark Mode
+- Conversation Memory
+- Multiple AI Models
+- File Upload
+- Voice Chat
+- Image Generation
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome.
+
+Fork the project
+
+Create your Feature Branch
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+Commit
+
+```bash
+git commit -m "Add Amazing Feature"
+```
+
+Push
+
+```bash
+git push origin feature/AmazingFeature
+```
+
+Open Pull Request
+
+---
+
+# 👨‍💻 Author
+
+## Utkarsh Kaushal
+
+GitHub
+
+https://github.com/Utkarsh6001
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, don't forget to Star the repository ⭐
+
+Made with ❤️ by **Utkarsh Kaushal**
+
+</div>

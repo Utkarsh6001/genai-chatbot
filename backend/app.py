@@ -13,7 +13,7 @@ CORS(app)
 chat_history = []
 
 HF_TOKEN = os.getenv('HUGGINGFACE_API_KEY')
-HF_MODEL = os.getenv('HF_MODEL', 'meta-llama/Meta-Llama-3-8B-Instruct')
+HF_MODEL = os.getenv("HF_MODEL", "Qwen/Qwen2.5-7B-Instruct")
 
 hf_client = None
 if HF_TOKEN:

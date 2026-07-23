@@ -17,7 +17,11 @@ HF_MODEL = os.getenv("HF_MODEL", "Qwen/Qwen2.5-7B-Instruct")
 
 hf_client = None
 if HF_TOKEN:
-    hf_client = InferenceClient(model=HF_MODEL, token=HF_TOKEN)
+    hf_client = InferenceClient(
+    provider="together",
+    model=HF_MODEL,
+    token=HF_TOKEN
+)
 
 
 def generate_bot_response(messages):

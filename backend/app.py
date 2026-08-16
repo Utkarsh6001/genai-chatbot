@@ -34,8 +34,7 @@ def generate_bot_response(messages):
         max_tokens=int(os.getenv('HF_MAX_TOKENS', '500')),
     )
     bot_response = response.choices[0].message.content.strip()
-    bot_response = re.sub(r'\s+-\s+\*\*', '\n\n- **', bot_response)
-    bot_response = re.sub(r'\s+(\d+\.)\s+', r'\n\n\1 ', bot_response)
+    
     return bot_response
 
 @app.route('/api/chat', methods=['POST'])

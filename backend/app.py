@@ -34,11 +34,10 @@ def generate_bot_response(messages):
         max_tokens=int(os.getenv('HF_MAX_TOKENS', '500')),
     )
     bot_response = response.choices[0].message.content.strip()
-    # Remove Markdown formatting
-bot_response = re.sub(r'\*\*(.*?)\*\*', r'\1', bot_response)
-bot_response = re.sub(r'(?<!\w)\*(.*?)(?<!\w)\*', r'\1', bot_response)
-bot_response = re.sub(r'`+', '', bot_response)
-bot_response = re.sub(r'^#{1,6}\s*', '', bot_response, flags=re.MULTILINE)
+    bot_response = re.sub(r'\*\*(.*?)\*\*', r'\1', bot_response)
+    bot_response = re.sub(r'(?<!\w)\*(.*?)(?<!\w)\*', r'\1', bot_response)
+    bot_response = re.sub(r'`+', '', bot_response)
+    bot_response = re.sub(r'^#{1,6}\s*', '', bot_response, flags=re.MULTILINE)
     
     return bot_response
 
